@@ -1,0 +1,133 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+		<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Merienda One">
+	
+		<!-- Bootstrap Css -->
+		<link rel="stylesheet" href="./css/en/bootstrap-mod.min.css">
+	
+		<!-- Vender Css -->
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+	   
+		<link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="./lib/slick/slick.css">
+		<link rel="stylesheet" href="./lib/slick/slick-theme.css">
+		<link rel="stylesheet" href="./lib/animate.css/animate.css">
+		<link rel="stylesheet" href="./lib/img-hover/img-hover.css">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Miniver&display=swap" rel="stylesheet">
+		<!-- Theme Css -->
+		<link rel="stylesheet" href="./css/en/general.min.css">
+		<link rel="stylesheet"  href="css/en/magnific-popup.css">
+		<link rel="stylesheet" href="./css/en/style.min.css">
+	<!-- java script -->
+		<!-- began -->
+		<!-- Main Scripts -->
+	   <!--  <script src="./lib/jquery/dist/jquery.min.js"></script> -->
+	   
+	   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+	   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+	   crossorigin="anonymous"></script>
+	   <!--  <script src="./lib/jquery-migrate/jquery-migrate-3.0.0.min.js"></script> -->
+		<script src="./lib/popper.js/dist/umd/popper.min.js"></script>
+		<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="./js/script.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js'></script> 
+	<style>
+		.col-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 1200px ! important;
+    display: flex;
+    justify-content: center;
+	color: #000;
+}
+.cont-text{
+	width: 1000px !important;
+	border:1px solid #230950;
+	border-radius: 10px;
+}
+p{
+
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 400;
+	margin-bottom: 30px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+span{
+	color: #3333ff;
+}
+h1{
+	font-family: 'Montserrat', sans-serif;font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+li {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+.latin{
+	font-family: 'Miniver', cursive;
+}
+	</style>
+		
+	</head>
+	<body class="bg-white">
+		<div class="My-resume my-5 " id="content">
+			<div class="container">
+				<div class="row justify-content-center ">
+					<div class="col-10 ">
+						<div class="py-12 px-6 w-100 cont-text">
+							<h1>Aml Ibrahim Mossad Makharita </h1>
+							<ul class="list-unstyled">
+								<li>01206604278</li>
+								<li>amlmossad20@gmail.com</li>
+							</ul>
+							<h1 class="mt-5 mb-3">Dear Sir,</h1>
+<div>
+	<p>
+		I am interested in applying for the position of web designer at your company and would like you to consider me for the role.  
+	</p>
+	<p>
+		You will see from my CV that I am a fully qualified and experienced web design professional who can present  innovative and creative solutions to meet clients’ equirements. My technical knowledge and vision are key to taking the desires and ideas of a client and translating them into a website that will effectively market and grow their business.  
+	</p>
+	<p>
+		I would be keen to discuss my suitability for the position  in more detail at interview. Please contact me on <span>(01206604278)</span> or at <span>(amlmossad20@gmail.com)</span> if you would like to take my application forward. Thank you for your consideration. I look forward to hearing from you. 
+	</p>
+</div>
+<h1 class="mt-4">Sincerely,
+</h1>
+<div class="latin">Aml Ibrahim</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="editor"></div>
+<button id="cmd">Generate PDF</button>
+<script sc="js/jspdf.min.js"></script>
+	</body>
+	<script>
+		var doc = new jsPDF();
+		var specialElementHandlers = {
+			'#editor': function (element, renderer) {
+				return true;
+			}
+		};
+	
+		$('#cmd').click(function () {
+			doc.fromHTML($('#content').html(), 15, 15, {
+				'width': 170,
+					'elementHandlers': specialElementHandlers
+			});
+			doc.save('sample-file.pdf');
+		});
+	
+		// This code is collected but useful, click below to jsfiddle link.
+	</script>
+</html>
